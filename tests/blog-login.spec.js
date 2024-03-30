@@ -21,7 +21,7 @@ describe('Blog app', () => {
       await page.fill('#username', 'testaaja');
       await page.fill('#password', 'testinen');
       await page.click('text=login');
-      await page.waitForSelector('.success');
+      await page.waitForSelector('.success', { timeout: 5000 });
     });
 
     test('fails with wrong credentials', async ({ page }) => {

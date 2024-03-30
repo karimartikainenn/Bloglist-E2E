@@ -6,7 +6,7 @@ describe('When logged in', () => {
     await page.fill('input#username', 'testi123');
     await page.fill('input#password', 'testinen123');
     await page.click('text=login');
-    await page.waitForSelector('.success');
+    await page.waitForSelector('.success', { timeout: 5000 });
   });
 
   test('blogs are sorted by number of likes', async ({ page }) => {
