@@ -3,8 +3,8 @@ const { test, expect, beforeEach, describe } = require('@playwright/test');
 describe('When logged in', () => {
   beforeEach(async ({ page, request }) => {
     await page.goto('http://localhost:5173/login');
-    await page.fill('input#username', 'your_username');
-    await page.fill('input#password', 'your_password');
+    await page.fill('input#username', 'testi123');
+    await page.fill('input#password', 'testinen123');
     await page.click('text=login');
     await page.waitForSelector('.success');
   });
