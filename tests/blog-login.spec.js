@@ -18,8 +18,8 @@ describe('Blog app', () => {
 
   describe('Login', () => {
     test('succeeds with correct credentials', async ({ page }) => {
-      await page.fill('#username', 'testaaja');
-      await page.fill('#password', 'testinen');
+        await page.fill('input#username', 'testaaja');
+        await page.fill('input#password', 'testinen');
       await page.click('text=login');
       await page.waitForSelector('.success', { timeout: 5000 });
     });
