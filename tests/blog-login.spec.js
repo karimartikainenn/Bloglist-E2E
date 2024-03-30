@@ -26,7 +26,7 @@ describe('Blog app', () => {
 
     test('fails with wrong credentials', async ({ page }) => {
       await page.fill('#username', 'testaaja');
-      await page.fill('#password', 'wrong'); // Incorrect password
+      await page.fill('#password', 'wrong'); 
       await page.click('text=login');
       await page.waitForSelector('.error');
       const error = await page.$('.error');
